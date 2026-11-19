@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechQuiz - Quiz & Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="quiz-container">
+        <header class="app-header">
+            <h1>TechQuiz</h1>
+            <p>Test your knowledge of Web Development and AI/ML!</p>
+        </header>
+
+        <!-- Start Screen -->
+        <section id="start-screen">
+            <div class="trophy">🏆</div>
+            <h2>Ready to play?</h2>
+            <p>Enter your name and challenge yourself!</p>
+            <label for="player-name" class="visually-hidden">Your name</label>
+            <input type="text" id="player-name" maxlength="24" placeholder="Enter your name" autocomplete="name">
+            <p id="name-error" class="error-message" aria-live="polite"></p>
+            <button id="start-button">Start Quiz</button>
+            <button id="view-leaderboard-button" class="secondary-button">View Leaderboard</button>
+        </section>
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen" class="hidden">
+            <div class="quiz-info">
+                <p id="question-number">Question 1 of 8</p>
+                <p id="score">Score: 0</p>
+            </div>
+            <div class="progress-track"><div id="progress-bar"></div></div>
+            <h2 id="question"></h2>
+            <div id="answers"></div>
+            <p id="feedback" aria-live="polite"></p>
+            <button id="next-button" class="hidden">Next Question</button>
+        </section>
+
+        <!-- Result Screen -->
+        <section id="result-screen" class="hidden">
+            <div class="trophy">🏆</div>
+            <h2>Quiz Completed!</h2>
+            <h3 id="final-score"></h3>
+            <p id="message"></p>
+            <p id="player-rank" class="rank-message"></p>
+            <div class="result-actions">
+                <button id="result-leaderboard-button">View Leaderboard</button>
+                <button id="restart-button" class="secondary-button">Play Again</button>
+                <button id="home-button" class="text-button">Home</button>
+            </div>
+        </section>
+
+        <!-- Leaderboard Screen -->
+        <section id="leaderboard-screen" class="hidden">
+            <h2>🏆 Leaderboard</h2>
+            <p class="leaderboard-subtitle">Top quiz players</p>
+            <div id="leaderboard-list"></div>
+            <p id="empty-leaderboard" class="empty-message hidden">No scores yet. Be the first to play!</p>
+            <div class="leaderboard-actions">
+                <button id="leaderboard-play-button">Play Quiz</button>
+                <button id="leaderboard-home-button" class="secondary-button">Back to Home</button>
+                <button id="clear-leaderboard-button" class="text-button">Clear Leaderboard</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
