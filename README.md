@@ -85,7 +85,3 @@ The main objective of this project is to develop an interactive quiz application
 ##  Developed By
 
 **Nafisa**
-
-##  License
-
-This project is created for learning and educational purposes.
